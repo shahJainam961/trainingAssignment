@@ -1,0 +1,85 @@
+﻿
+@model List<Mvc.Models.MvcProductModel>
+
+@{
+    ViewBag.Title = "ProductList";
+}
+
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <p class="navbar-text navbar-right"><a href="@Url.Action("LogOut","User")" class="navbar-link">Log - Out</a></p>
+    </div>
+</div>
+
+<div class="container-fluid">
+        <nav class="col-md-2 ">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="~/Product/AddOrEdit">Add Product</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+</div>
+
+<div class="page-container">
+    <div class="page-wrapper">
+        <div class="main custom__main">
+            <div class="container">
+                <table id="productList_table" class="table display nowrap hover stripe row-border" style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Short Image</th>
+                            <th>Short Desc</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@item.Category</td>
+                            <td>@item.Price</td>
+                            <td>@item.Quantity</td>
+                            <td><center><img src="@Url.Content(item.smallImage)" width="50" height="50" /></center></td>
+                            <td>@item.shortDescription</td>
+                            <td>
+                                <a href="@Url.Action("AddOrEdit","Product",new {item.Id,item.Name,item.Category,item.Price,item.Quantity,item.smallImage,item.longImage,item.shortDescription,item.longDescription})" class="btn btn-success">Edit</a>
+
+
+                                <a href="@Url.Action("Delete","Product",new {item.Id})" class="btn btn-danger">Delete</a>
+
+                            </td>
+
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+@Html.ActionLink("Dashboard", "dashboard", "User")
+
+@section scripts{
+    <script>
+        $(function () {
+            var msg ='@TempData["success"]';
+            if (msg != '') {
+
+                alertify.success(msg);
+            }
+        });
+    </script>
+}
+

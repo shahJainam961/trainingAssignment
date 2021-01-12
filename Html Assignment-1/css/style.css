@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "Gilroy-ExtraBold";
+  src: url("../font/Gilroy-ExtraBold.woff2") format("woff2"),
+    url("../font/Gilroy-ExtraBold.woff") format("woff");
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: grey;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #fff;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #ccc;
+}
+
+body {
+  font-family: "Gilroy-ExtraBold", sans-serif;
+}
+
+a {
+  color: #777;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: underline #ffffff;
+}
+
+#zoomIn:hover{
+  transform: scale(1.2);
+  transition-duration: 1.0s;
+}
+
+.main{
+  height:100vh!important;
+}
+
+.bgImg {
+  background-image: url("../img/chair-r.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-dark {
+  background-color: black !important;
+  color: #fff;
+}
+
+.bg-light {
+  background-color: #f1f1f1 !important;
+}
+
+.ftor{
+  width: auto;
+  padding-top:50px;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.navbar{
+  background-color: #eeeeee ;
+}
+
+.navbar-brand {
+  font-size: 25px;
+  z-index: 999999;
+}
+
+#changeText {
+  height: 0.9em;
+}
+
+.bg-1 {
+  background-color: #ac9891;
+  color: #fff !important;
+  background-image: url("../img/chair3/chair1.png");
+  padding: 18rem 1rem;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 60% auto;
+}
+
+.bg-2 {
+  background-color: #bb6752;
+  color: #fff !important;
+  background-image: url("../img/chair3/chair2.png");
+  padding: 18rem 1rem;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 60% auto;
+}
+
+.stroke {
+  color: transparent !important;
+  -webkit-text-stroke: 1px #000000;
+}
+
+.hero {
+  font-size: 60px;
+  margin-top: 6rem;
+}
+
+.toTop{
+  position: fixed;
+  bottom: 60px;
+  right: -60px;
+  float: right;
+  transform: rotateZ(-90deg);
+}
+
+.map{
+  position: relative;
+  top: 40px;
+  left: -10px;
+  width: 500px;
+  height: 300px;
+  background-image: url(../img/map.jpg);
+}

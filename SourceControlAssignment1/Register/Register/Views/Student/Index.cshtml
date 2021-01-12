@@ -1,0 +1,84 @@
+﻿@model Register.Models.Student
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Student Form</h2>
+
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.LabelFor(m => m.UserName)
+        <br />
+        @Html.TextBoxFor(m => m.UserName)
+        <span style="color:red">
+            @Html.ValidationMessageFor(m => m.UserName)
+        </span>
+    </p>
+
+    <p>
+        @Html.LabelFor(m => m.Name)
+        <br />
+        @Html.TextBoxFor(m => m.Name)
+        <span style="color:red">
+            @Html.ValidationMessageFor(m => m.Name)
+        </span>
+    </p>
+
+    <p>
+        @Html.LabelFor(m => m.Email)
+        <br />
+        @Html.TextBoxFor(m => m.Email)
+        <span style="color:red">
+            @Html.ValidationMessageFor(m => m.Email)
+        </span>
+    </p>
+
+    <p>
+        @Html.LabelFor(m => m.Password)
+        <br />
+        @Html.PasswordFor(m => m.Password)
+        <span style="color:red">
+            @Html.ValidationMessageFor(m => m.Password)
+        </span>
+    </p>
+
+    <p>
+        @Html.LabelFor(m => m.ConfirmPassword)
+        <br />
+        @Html.PasswordFor(m => m.ConfirmPassword)
+        <span style="color:red">
+            @Html.ValidationMessageFor(m => m.ConfirmPassword)
+        </span>
+    </p>
+
+    <p>
+        @Html.LabelFor(m => m.Age)
+        <br />
+        @Html.TextBoxFor(m => m.Age)
+        <span style="color:red">
+            @Html.ValidationMessageFor(m => m.Age)
+        </span>
+    </p>
+
+    <p>
+        @Html.LabelFor(m => m.Comment)
+        <br />
+        @Html.TextAreaFor(m => m.Comment)
+    </p>
+
+
+    <p>
+        @Html.CheckBoxFor(m => m.Agree)
+        @Html.LabelFor(m => m.Agree)
+        <br />
+        <span style="color:red">
+            @Html.ValidationMessageFor(m => m.Agree)
+        </span>
+    </p>
+
+    <p style="margin-top:10px;">
+        <input type="submit" value="Submit" />
+    </p>
+}
+
+

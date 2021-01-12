@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dataModelStoreContainer" CdmEntityContainer="dataEntities">
+    <EntitySetMapping Name="user_tbl">
+      <EntityTypeMapping TypeName="dataModel.user_tbl">
+        <MappingFragment StoreEntitySet="user_tbl">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="product_tbl">
+      <EntityTypeMapping TypeName="dataModel.product_tbl">
+        <MappingFragment StoreEntitySet="product_tbl">
+          <ScalarProperty Name="longImage" ColumnName="longImage" />
+          <ScalarProperty Name="smallImage" ColumnName="smallImage" />
+          <ScalarProperty Name="longDescription" ColumnName="longDescription" />
+          <ScalarProperty Name="shortDescription" ColumnName="shortDescription" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
