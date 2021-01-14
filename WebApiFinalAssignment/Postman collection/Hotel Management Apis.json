@@ -1,0 +1,164 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Hotel Management Apis",
+		"_postman_id": "51775ede-3fa2-49e3-80de-b16ac3b31e65",
+		"description": "Apis for Hotel Management Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44367/api/booking",
+			"request": {
+				"url": "https://localhost:44367/api/booking/GetHotels",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": " GET all hotels sort by alphabetic order. Response: List of hotels "
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44367/api/booking/GetHotels",
+			"request": {
+				"url": "https://localhost:44367/api/booking/GetHotelById/2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44367/api/booking/createHotel",
+			"request": {
+				"url": "https://localhost:44367/api/booking/createHotel",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"hotelName\":\"kk\",\n\t\"address\":\"surat\",\n\t\"city\":\"surat\",\n\t\"pincode\":\"382350\",\n\t\"contactPerson\":\"Bhargav\",\n\t\"contactNumber\":\"9898656543\",\n\t\"createdBy\":\"Admin\",\n\t\"updatedBy\":\"Admin\",\n\t\"facebook\":\"kk.facebook.com\",\n\t\"Twitter\":\"kk.twitter.com\",\n\t\"website\":\"www.kk.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44367/api/booking/bookRoom",
+			"request": {
+				"url": "https://localhost:44367/api/booking/bookRoom",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"hotelid\":\"1\",\n\t\"bookingDate\":\"2019-07-23\",\n\t\"roomid\":\"2\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44367/api/booking/checkAvailability",
+			"request": {
+				"url": "https://localhost:44367/api/booking/checkAvailability",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"bookingDate\":\"2020-08-12\"\n}"
+				},
+				"description": " GET availability of room on some particular date (parameter), Response: should be return True\r\nFalse only"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44367/api/booking/DeleteBooking/1",
+			"request": {
+				"url": "https://localhost:44367/api/booking/DeleteBooking/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44367/api/booking/UpdateBookingDate",
+			"request": {
+				"url": "https://localhost:44367/api/booking/UpdateBookingDate",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"bookingId\":1,\n\t\"bookingDate\":\"2020-09-12\"\n}"
+				},
+				"description": "PUT update booking date for any room by Id"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44367/api/booking/UpdateBookingStatus",
+			"request": {
+				"url": "https://localhost:44367/api/booking/UpdateBookingStatus",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"bookingId\":1,\n\t\"statusOfBooking\":\"Cancelled\"\n}"
+				},
+				"description": " PUT update booking status by booking Id"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44367/api/booking/getRoomsByParameters",
+			"request": {
+				"url": "https://localhost:44367/api/booking/getRoomsByParameters",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"city\":\"\",\n\t\"pincode\":\"\",\n\t\"price\":\"3000\",\n\t\"category\":\"3\"\n}"
+				},
+				"description": "GET all rooms of hotels with optional parameter by hotel city, pin code, Price, Category. (Default\r\nsort by price of room low to high)\r\n"
+			},
+			"response": []
+		}
+	]
+}

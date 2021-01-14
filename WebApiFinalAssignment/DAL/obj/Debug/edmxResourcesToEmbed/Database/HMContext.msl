@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dataModelStoreContainer" CdmEntityContainer="HMEntities">
+    <EntitySetMapping Name="tbl_booking">
+      <EntityTypeMapping TypeName="dataModel.tbl_booking">
+        <MappingFragment StoreEntitySet="tbl_booking">
+          <ScalarProperty Name="bookingId" ColumnName="bookingId" />
+          <ScalarProperty Name="hotelid" ColumnName="hotelid" />
+          <ScalarProperty Name="roomid" ColumnName="roomid" />
+          <ScalarProperty Name="statusOfBooking" ColumnName="statusOfBooking" />
+          <ScalarProperty Name="bookingDate" ColumnName="bookingDate" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_hotel">
+      <EntityTypeMapping TypeName="dataModel.tbl_hotel">
+        <MappingFragment StoreEntitySet="tbl_hotel">
+          <ScalarProperty Name="hid" ColumnName="hid" />
+          <ScalarProperty Name="hotelName" ColumnName="hotelName" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="pincode" ColumnName="pincode" />
+          <ScalarProperty Name="contactNumber" ColumnName="contactNumber" />
+          <ScalarProperty Name="contactPerson" ColumnName="contactPerson" />
+          <ScalarProperty Name="website" ColumnName="website" />
+          <ScalarProperty Name="facebook" ColumnName="facebook" />
+          <ScalarProperty Name="Twitter" ColumnName="Twitter" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="createDate" ColumnName="createDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_room">
+      <EntityTypeMapping TypeName="dataModel.tbl_room">
+        <MappingFragment StoreEntitySet="tbl_room">
+          <ScalarProperty Name="rid" ColumnName="rid" />
+          <ScalarProperty Name="hotelid" ColumnName="hotelid" />
+          <ScalarProperty Name="roomName" ColumnName="roomName" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="createdDate" ColumnName="createdDate" />
+          <ScalarProperty Name="createdBy" ColumnName="createdBy" />
+          <ScalarProperty Name="updateDate" ColumnName="updateDate" />
+          <ScalarProperty Name="updatedBy" ColumnName="updatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_booking">
+    <Key>
+      <PropertyRef Name="bookingId" />
+    </Key>
+    <Property Name="bookingId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="hotelid" Type="bigint" />
+    <Property Name="roomid" Type="bigint" />
+    <Property Name="statusOfBooking" Type="nvarchar" MaxLength="50" />
+    <Property Name="bookingDate" Type="nvarchar(max)" />
+    <Property Name="isActive" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_hotel">
+    <Key>
+      <PropertyRef Name="hid" />
+    </Key>
+    <Property Name="hid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="hotelName" Type="nvarchar(max)" />
+    <Property Name="address" Type="nvarchar(max)" />
+    <Property Name="city" Type="nvarchar(max)" />
+    <Property Name="pincode" Type="nvarchar(max)" />
+    <Property Name="contactNumber" Type="bigint" />
+    <Property Name="contactPerson" Type="nvarchar" MaxLength="50" />
+    <Property Name="website" Type="nvarchar(max)" />
+    <Property Name="facebook" Type="nvarchar(max)" />
+    <Property Name="Twitter" Type="nvarchar(max)" />
+    <Property Name="isActive" Type="nvarchar(max)" />
+    <Property Name="createDate" Type="datetime" />
+    <Property Name="createdBy" Type="nvarchar(max)" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="updatedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_room">
+    <Key>
+      <PropertyRef Name="rid" />
+    </Key>
+    <Property Name="rid" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="hotelid" Type="bigint" />
+    <Property Name="roomName" Type="nvarchar" MaxLength="50" />
+    <Property Name="category" Type="nvarchar" MaxLength="50" />
+    <Property Name="price" Type="nvarchar(max)" />
+    <Property Name="isActive" Type="bigint" />
+    <Property Name="createdDate" Type="datetime" />
+    <Property Name="createdBy" Type="nvarchar(max)" />
+    <Property Name="updateDate" Type="datetime" />
+    <Property Name="updatedBy" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="dataModelStoreContainer">
+    <EntitySet Name="tbl_booking" EntityType="Self.tbl_booking" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_hotel" EntityType="Self.tbl_hotel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_room" EntityType="Self.tbl_room" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
